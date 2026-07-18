@@ -1,0 +1,12 @@
+.git
+Hypha
+node_modules
+dist
+build
+coverage
+logs
+tmp
+data
+outputs
+.env
+.env.*

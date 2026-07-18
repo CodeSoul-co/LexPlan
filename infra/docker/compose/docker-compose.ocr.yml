@@ -1,0 +1,30 @@
+services:
+  ocr-service:
+    image: lexplan-ocr-service:gpu-cu118
+    build:
+      context: ../../..
+      dockerfile: infra/docker/ocr-service/Dockerfile
+    gpus: all
+    ports:
+      - "8765:8765"
+    environment:
+      OCR_LANG: ch
+      OCR_VERSION: ${OCR_VERSION:-}
+      OCR_DEVICE: ${OCR_DEVICE:-gpu:0}
+      OCR_ENGINE: ${OCR_ENGINE:-paddle_static}
+      OCR_USE_DOC_ORIENTATION_CLASSIFY: "false"
+      OCR_USE_DOC_UNWARPING: "false"
+      OCR_USE_TEXTLINE_ORIENTATION: "false"
+      PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK: "true"
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility
+    volumes:
+      - ../../../data/ocr/uploads:/data/uploads
+      - ../../../data/ocr/models:/root/.paddlex
+      - ../../../data/ocr/cache:/root/.cache
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8765/health', timeout=3).read()"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
