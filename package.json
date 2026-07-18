@@ -1,0 +1,25 @@
+{
+  "name": "lexplan",
+  "version": "0.1.0",
+  "private": true,
+  "description": "LexPlan legal study planning-card Agent product built on Hypha as an external framework dependency.",
+  "workspaces": [
+    "backend/lexplan-node",
+    "app/web"
+  ],
+  "scripts": {
+    "dev:backend": "npm --workspace @lexplan/backend run dev",
+    "dev:web": "npm --workspace @lexplan/web run dev",
+    "build": "npm run build:backend && npm run build:web",
+    "build:backend": "npm --workspace @lexplan/backend run build",
+    "build:web": "npm --workspace @lexplan/web run build",
+    "typecheck": "npm run typecheck:backend && npm run typecheck:web",
+    "typecheck:backend": "npm --workspace @lexplan/backend run typecheck",
+    "typecheck:web": "npm --workspace @lexplan/web run build",
+    "test": "npm --workspace @lexplan/backend run test",
+    "check:hypha": "node scripts/check-hypha-version.mjs"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

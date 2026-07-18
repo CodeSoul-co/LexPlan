@@ -1,0 +1,1 @@
+export { legalStudyDomainPack as lexPlanDomainPack } from '../backend/lexplan-node/src/domain-pack';
