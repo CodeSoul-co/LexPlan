@@ -102,8 +102,6 @@ LexPlan/
 
 > **LexPlan 当前依赖 Hypha 提供的运行时与工具契约。首次安装前，必须将 [CodeSoul-co/Hypha](https://github.com/CodeSoul-co/Hypha) 克隆到项目根目录的 `Hypha/`。**
 
-`Hypha/` 是本地第三方源码目录，已被 Git 忽略，不属于 LexPlan 仓库，也不得提交到 LexPlan。
-
 目录应当是：
 
 ```text
