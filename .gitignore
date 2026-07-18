@@ -1,0 +1,94 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment files - never commit secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+.claude/
+*.swp
+*.swo
+.DS_Store
+
+# Local contributor guide
+AGENTS.md
+
+# Local agent/runtime metadata
+.agents/
+.codex/
+.codex-runtime/
+.codex-tmp/
+
+# Local development planning docs
+docs/dev_tmp_docs/
+dev_docs/
+docs/frontend-showcase.md
+
+# Internal test and acceptance notes
+tests/**/*.md
+domain-pack/evaluations/*.md
+domain-pack/fixtures/*.md
+
+# Test coverage
+coverage/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Local runtime data, storage records, and data-scoped logs
+data/
+
+# Redis dump
+dump.rdb
+
+# TypeScript cache
+*.tsbuildinfo
+
+# OS files
+Thumbs.db
+
+# Local run artifacts
+outputs/
+*.pid
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Hypha is maintained as an independent third-party repository.
+Hypha/
+
+# LexPlan local environment and generated data.
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+build/
+coverage/
+logs/
+tmp/
+data/
+outputs/
+*.log
+*.pid
+.cache/
+
+# The repository uses npm and package-lock.json.
+pnpm-lock.yaml

@@ -1,0 +1,7 @@
+{
+  "backendPort": 3000,
+  "webPort": 5173,
+  "mongoUri": "mongodb://127.0.0.1:27017/lexplan",
+  "redisUrl": "redis://127.0.0.1:6379",
+  "ocrServiceUrl": "http://127.0.0.1:8765/ocr"
+}

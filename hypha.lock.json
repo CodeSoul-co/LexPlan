@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/CodeSoul-co/Hypha.git",
+  "branch": "dev-domain-merge",
+  "commit": "78eb63d95729c6041f97272339c0e33265b222fa",
+  "packages": {
+    "@hypha/core": "0.0.0",
+    "@hypha/domain": "0.0.0",
+    "@hypha/harness": "0.0.0",
+    "@hypha/tools": "0.0.0",
+    "@hypha/mcp": "0.0.0",
+    "@hypha/models": "0.0.0"
+  },
+  "domainPackSchemaVersion": "0.0.0",
+  "updatedAt": "2026-07-14T00:00:00.000Z",
+  "notes": "Hypha is an external ignored checkout in ./Hypha. LexPlan must not commit Hypha source."
+}
